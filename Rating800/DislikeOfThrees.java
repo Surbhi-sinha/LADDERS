@@ -8,19 +8,17 @@ public class DislikeOfThrees {
             while(tc-- > 0){
                   int k = sc.nextInt();
                   //hume series ka kth val batana hai
-                  int num = 1;
-                  int i = 1;
-                  while( i<= k ){
-                        if(num%3 == 0 ){
-                              num++;
+            
+                  for( int i = 1; ; i++ ){
+                        if(i %3 == 0 || i% 10 == 3 ){
+                              continue;
                         }
-                        if(num%10 == 3){
-                              num++;
+                        if(--k == 0){
+                              System.out.println(i);
+                              break;
                         }
-                        num++;
-                        i++;
+                        
                   }
-                  System.out.println(num-1+"ans");
             }
       }
 }
