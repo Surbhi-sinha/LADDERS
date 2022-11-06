@@ -1,0 +1,28 @@
+package codechefTNP.practiceWeek5;
+import java.util.*;
+public class Pushpa {
+      public static void main(String[] args) {
+            Scanner scn = new Scanner(System.in);
+            int tc = scn.nextInt();
+            while(tc-- > 0) {
+                  int n = scn.nextInt();
+                  int[] arr = new int[n];
+                  for(int i = 0; i < n; i++){
+                        arr[i] = scn.nextInt();
+                  }
+
+                  Arrays.sort(arr);
+                  int index = 0;
+                  boolean flag = isPresent(arr[index]+1);
+                  while(flag){
+                        
+                  }
+
+            }
+
+      }
+
+      public static boolean isPresent(int X){
+            return false;
+      }
+}

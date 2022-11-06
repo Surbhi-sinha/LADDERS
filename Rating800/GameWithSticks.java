@@ -6,6 +6,15 @@ public class GameWithSticks {
             int n = sc.nextInt();
             int m = sc.nextInt();
 
-            
+            if(n > m){
+                  int temp = n;
+                  n = m;
+                  m = n;
+            }
+            if(n % 2 == 0){
+                  System.out.println("Malvika");
+            }else{
+                  System.out.println("Akshat");
+            }
       }
 }
