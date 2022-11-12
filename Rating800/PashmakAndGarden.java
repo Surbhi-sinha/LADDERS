@@ -7,16 +7,22 @@ public class PashmakAndGarden {
             int y1 = scn.nextInt();
             int x2 = scn.nextInt();
             int y2 = scn.nextInt();
-            int x3 = 0;
-            int y3 = 0;
-            int x4 = 0;
-            int y4 = 0;
             
-            x3 = Math.max(x1 , x2);
-            y3 = 0;
-            x4 = 0;
-            y4 = Math.max(y1 , y2);
-            // if(Math.abs(x1 - x2 ) == Math.abs(x2 - x3) == Math.abs(x3-x4)&& Math.abs(x4-x1) )
+            if(x1 != x2 && y1 != y2 && abs(x1 - x2) != abs(y1 - y2)) {
+                  System.out.println(-1);
+            }else if(x1 == x2){
+                  int X = abs(y1-y2);
+                  System.out.println((x1 + X) +" " + y1 +" " + (x2+X) + " "+ (y2));
+            }else if(y1 == y2){
+                  int Y = abs(x1-x2);
+                  System.out.println(x1 +" " + (y1+Y)+ " "+ x2 +" " + (y2+Y) );
+            }else{
+                  System.out.println(x1 +" " + y2+" " + x2 +" " + y1);
+            }
             
+      }
+
+      public static int abs(int x) {
+            return x>0 ? x:-x;
       }
 }

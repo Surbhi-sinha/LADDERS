@@ -12,17 +12,28 @@ public class Pushpa {
                   }
 
                   Arrays.sort(arr);
-                  int index = 0;
-                  boolean flag = isPresent(arr[index]+1);
-                  while(flag){
-                        
+                  int max = 0;
+                  int c = 0;
+                  if(n == 1) {
+                        System.out.println(arr[0]);
+                  }else{
+                        for(int i = n-1 ; i >= 1 ; i--){
+                              if(arr[i] == arr[i-1]){
+                                    c++;
+                              }else{
+                                    if(max < arr[i]+c ) max = arr[i] + c;
+                                    c=0;
+                              }
+                        }
+                        if(max < arr[0]+c) max = arr[0] + c;
+                        System.out.println(max);
                   }
+
+                  
 
             }
 
       }
 
-      public static boolean isPresent(int X){
-            return false;
-      }
+      
 }
